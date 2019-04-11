@@ -1,0 +1,17 @@
+# Facts:
+# Vincent van Gogh created starry night
+<http://example.com/starrynight> <http://example.com/createdBy> <http://example.com/Vincent_van_Gogh> .
+# Vincent van Gogh was born in Zundert
+<http://example.com/Vincent_van_Gogh> <http://example.com/bornIn> <http://example.com/Zundert> .
+# Zundert is part of the Netherlands
+<http://example.com/Zundert> <http://example.com/partOf> <http://example.com/Netherlands> .
+
+# Types:
+# starry night is an Artwork
+<http://example.com/starrynight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/Artwork> .
+# Vincent van Gogh is an Artist
+<http://example.com/Vincent_van_Gogh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/Artist> .
+# Zundert is a City
+<http://example.com/Zundert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/City> .
+# Netherlands is a Country
+<http://example.com/Netherlands> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.com/Country> .

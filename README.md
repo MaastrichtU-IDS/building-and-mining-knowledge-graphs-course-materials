@@ -1,0 +1,4 @@
+
+# Building and mining knowledge graphs course materials
+
+This repository contains educational materials developed by the [Institute of Data Science](https://www.maastrichtuniversity.nl/research/institute-data-science) at [Maastricht University](https://www.maastrichtuniversity.nl/). The materials were used to deliver a pilot MSc course on [Building and Mining Knowledge Graphs](https://www.maastrichtuniversity.nl/meta/359582/building-and-mining-knowledge-graphs) (course code: KEN4256) at the [Department of Data Science & Knowledge Engineering](https://www.maastrichtuniversity.nl/education/bachelor/bachelor-data-science-and-knowledge-engineering) (DKE) at Maastricht University from February - April 2019.

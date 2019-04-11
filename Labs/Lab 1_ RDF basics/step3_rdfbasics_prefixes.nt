@@ -1,0 +1,21 @@
+# Prefixes:
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex: <http://example.com/>
+
+# Facts:
+# Vincent van Gogh created starry night
+ex:starrynight ex:createdBy ex:Vincent_van_Gogh .
+# Vincent van Gogh was born in Zundert
+ex:Vincent_van_Gogh ex:bornIn ex:Zundert .
+# Zundert is part of the Netherlands
+ex:Zundert ex:partOf ex:Netherlands .
+
+# Types:
+# starry night is an Artwork
+ex:starrynight rdf:type ex:Artwork .
+# Vincent van Gogh is an Artist
+ex:Vincent_van_Gogh rdf:type ex:Artist .
+# Zundert is a City
+ex:Zundert rdf:type ex:City .
+# Netherlands is a Country
+ex:Netherlands rdf:type ex:Country .

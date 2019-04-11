@@ -1,0 +1,31 @@
+# Prefixes:
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ex: <http://example.com/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <https://www.wikidata.org/wiki/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Facts:
+# Vincent van Gogh created starry night
+wd:Q45585 ex:createdBy ex:Vincent_van_Gogh .
+# Vincent van Gogh was born in Zundert
+ex:Vincent_van_Gogh ex:bornIn ex:Zundert .
+# Zundert is part of the Netherlands
+ex:Zundert ex:partOf ex:Netherlands .
+# Vincent van Gogh is 37 years old (when he died)
+ex:Vincent_van_Gogh ex:hasAge "37"^^xsd:nonNegativeInteger .
+
+# Types:
+# starry night is an Artwork
+wd:Q45585 rdf:type ex:Artwork .
+# Vincent van Gogh is an Artist
+ex:Vincent_van_Gogh rdf:type ex:Artist .
+# Zundert is a City
+ex:Zundert rdf:type ex:City .
+# Netherlands is a Country
+ex:Netherlands rdf:type ex:Country .
+
+# Labels:
+# Entity wd:Q45585 refers to "the starry night"
+wd:Q45585 rdfs:label "The Starry Night"@en .
+

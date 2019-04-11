@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LIMES SYSTEM "limes.dtd">
+<LIMES>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/1999/02/22-rdf-syntax-ns#</NAMESPACE>
+    <LABEL>rdf</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/2002/07/owl#</NAMESPACE>
+    <LABEL>owl</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://dbpedia.org/ontology/</NAMESPACE>
+    <LABEL>dbo</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://www.w3.org/2000/01/rdf-schema#</NAMESPACE>
+    <LABEL>rdfs</LABEL>
+</PREFIX>
+<PREFIX>
+    <NAMESPACE>http://linkedgeodata.org/ontology/</NAMESPACE>
+    <LABEL>lgd</LABEL>
+</PREFIX>
+<SOURCE>
+    <ID>dbpedia</ID>
+    <ENDPOINT>http://dbpedia.org/sparql</ENDPOINT>
+    <VAR>?y</VAR>
+    <PAGESIZE>5000</PAGESIZE>
+    <RESTRICTION>?y rdf:type dbo:City</RESTRICTION>
+    <PROPERTY>rdfs:label AS nolang</PROPERTY>
+    <TYPE>sparql</TYPE>
+</SOURCE>    
+<TARGET>
+    <ID>graphdb</ID>
+    <ENDPOINT>http://linkedgeodata.org/sparql</ENDPOINT>
+    <VAR>?x</VAR>
+    <PAGESIZE>5000</PAGESIZE>
+    <RESTRICTION>?x rdf:type lgd:City</RESTRICTION>
+    <PROPERTY>rdfs:label</PROPERTY>
+</TARGET>
+<METRIC>
+    levenshtein(y.rdfs:label, x.rdfs:label)
+</METRIC>
+<ACCEPTANCE>
+    <THRESHOLD>0.98</THRESHOLD>
+    <FILE>accepted.nt</FILE>
+    <RELATION>owl:sameAs</RELATION>
+</ACCEPTANCE>
+<REVIEW>
+    <THRESHOLD>0.85</THRESHOLD>
+    <FILE>reviewme.nt</FILE>
+    <RELATION>owl:sameAs</RELATION>
+</REVIEW>
+<OUTPUT>N3</OUTPUT>
+</LIMES>
